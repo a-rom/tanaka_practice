@@ -49,6 +49,24 @@ class TanakaPracticeTest < Minitest::Test
     assert_equal true,  @main.enough_length?("TANA")
     assert_equal false,  @main.enough_length?("TANAKATANAKATANAKA")
   end
+
+  def fizz_buzz
+    assert_equal "FizzBuzz", @main.fizz_buzz(15)
+    assert_equal "FizzBuzz", @main.fizz_buzz(30)
+    assert_equal "FizzBuzz", @main.fizz_buzz(45)
+    assert_equal "Buzz", @main.fizz_buzz(5)
+    assert_equal "Buzz", @main.fizz_buzz(10)
+    assert_equal "Buzz", @main.fizz_buzz(20)
+    assert_equal "Buzz", @main.fizz_buzz(25)
+    assert_equal "Fizz", @main.fizz_buzz(3)
+    assert_equal "Fizz", @main.fizz_buzz(6)
+    assert_equal "Fizz", @main.fizz_buzz(9)
+    assert_equal "", @main.fizz_buzz(1)
+    assert_equal "", @main.fizz_buzz(2)
+    assert_equal "", @main.fizz_buzz(4)
+  end
+
+
   
   def hello
     assert_equal "Hello", @main.hello
